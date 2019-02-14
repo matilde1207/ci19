@@ -1,0 +1,116 @@
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    padding: 20px; 
+}
+
+
+body{
+    font-size: 50px;
+    font-family: sans-serif;
+    color: #1fbad6;
+    padding: 20px;
+    padding-bottom: 20px;
+}
+
+
+.grid-item1 {
+    background-color: #e5e5e9;
+    padding: 45px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.grid-item1:hover {
+    background: url("step1.jpg") no-repeat;
+    color:transparent;    
+}
+ 
+
+.grid-item2 {
+    background-color: #e5e5e9;
+    padding: 45px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.grid-item2:hover {
+    background: url("step2.jpg") no-repeat;
+    color:transparent;    
+}
+
+.grid-item3 {
+    background-color: #e5e5e9;
+    padding: 45px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.grid-item3:hover {
+    background: url("step3.jpg") no-repeat;
+    color:transparent;    
+}
+
+.grid-item4 {
+    background-color: #e5e5e9;
+    padding: 45px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.grid-item4:hover {
+    background: url("step4.jpg") no-repeat;
+    color:transparent;    
+}
+
+.grid-item5 {
+    background-color: #e5e5e9;
+    padding: 45px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.grid-item5:hover {
+    background: url("step5.jpg") no-repeat;
+    color:transparent;    
+}
+
+.grid-item6 {
+    background-color: #e5e5e9;
+    padding: 45px;
+    font-size: 20px;
+    font-family: sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+.grid-item6:hover {
+    background: url("step6.jpg") no-repeat;
+    color:transparent;    
+}
+
+@media not all and (hover) {
+    /* mobile only */
+    main{
+        grid-template-columns: auto;
+    }
+    
+}
