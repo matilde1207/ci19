@@ -3,7 +3,7 @@
 <body>
 <script>
 
-    var url = "https://raw.githubusercontent.com/matilde1207/ci19/master/studio/collection/places.json"
+    var url = "https://raw.githubusercontent.com/matilde1207/ci19/master/studio/collection/places_v2.json"
     
     fetch(url)
         .then(function(response){return response.json();})
@@ -11,19 +11,18 @@
     
     function buildPage(data){
         for(var i = 0; i < data.length; i = i + 1){
-            var me = document.createElement("h3");
-            var elodie = document.createElement("h3");
-            var fran = document.createElement("h3");
-            var allegra = document.createElement("h3");
-            var nina = document.createElement("h3");
-            var ben = document.createElement("h3");
-            var emily = document.createElement("h3");
-            var matias = document.createElement("h3");
-            var millie = document.createElement("h3");
-            var jackson = document.createElement("h3");
-            //for example 
-//            var image = document.createElement("img");
-//            image.attr("src", data[i]);
+            var image = document.createElement("me");
+            var image = document.createElement("elodie");
+            var image = document.createElement("fran");
+            var image = document.createElement("allegra");
+            var image = document.createElement("nina");
+            var image = document.createElement("ben");
+            var image = document.createElement("emily");
+            var image = document.createElement("matias");
+            var image = document.createElement("millie");
+            var image = document.createElement("jackson");
+                
+            image.attr(src="https://cdn.japantimes.2xx.jp/wp-content/uploads/2018/03/n-kyoto-a-20180316-870x580.jpg", data[me]);
             
             document.body.appendChild(me);
             document.body.appendChild(elodie);
