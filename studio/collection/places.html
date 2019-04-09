@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<title></title>
+<body>
+<script>
+
+    var url = "https://raw.githubusercontent.com/matilde1207/ci19/master/studio/collection/places.json"
+    
+    fetch(url)
+        .then(function(response){return response.json();})
+        .then(function(json){ buildPage(json);})
+    
+    function buildPage(data){
+        for(var i = 0; i < data.length; i = i + 1){
+            var me = document.createElement("h3");
+            var elodie = document.createElement("h3");
+            var fran = document.createElement("h3");
+            var allegra = document.createElement("h3");
+            var nina = document.createElement("h3");
+            var ben = document.createElement("h3");
+            var emily = document.createElement("h3");
+            var matias = document.createElement("h3");
+            var millie = document.createElement("h3");
+            var jackson = document.createElement("h3");
+            //for example 
+//            var image = document.createElement("img");
+//            image.attr("src", data[i]);
+            
+            document.body.appendChild(me);
+            document.body.appendChild(elodie);
+            document.body.appendChild(fran);
+            document.body.appendChild(allegra);
+            document.body.appendChild(nina);
+            document.body.appendChild(ben);
+            document.body.appendChild(emily);
+            document.body.appendChild(matias);
+            document.body.appendChild(millie);
+            document.body.appendChild(jackson);
+            
+            me.innerHTML = data[i].me;
+            elodie.innerHTML = data[i].elodie;
+            fran.innerHTML = data[i].fran;
+            allegra.innerHTML = data[i].allegra;
+            fran.innerHTML = data[i].fran;
+            nina.innerHTML = data[i].nina;
+            ben.innerHTML = data[i].ben;
+            emily.innerHTML = data[i].emily;
+            matias.innerHTML = data[i].matias;
+            millie.innerHTML = data[i].millie;
+            jackson.innerHTML = data[i].jackson;
+            
+       
+            var line = document.createElement("hr");
+            document.body.appendChild(line);
+        }
+    }
+    
+</script>
+</body>
+</html>
