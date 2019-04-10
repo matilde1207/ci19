@@ -1,58 +1,29 @@
 <!DOCTYPE html>
 <title></title>
 <body>
+    
+    <div
+    class="banner-section" id="img-container">
+    </div>
+    
 <script>
 
-    var url = "https://raw.githubusercontent.com/matilde1207/ci19/master/studio/collection/places_v2.json"
+    var data = {
+    "images": [{
+    "elodie": "https://cdn.japantimes.2xx.jp/wp-content/uploads/2018/03/n-kyoto-a-20180316-870x580.jpg"},
+    {"elodie" : "https://media.goeco.org/_media/media/320/10267_455_300.jpg"}]
+    };
+
+    data.images.forEach( function(obj) {
+      var img = new Image();
+      img.src = obj.elodie;
+      img.setAttribute("class", "banner-img");
+      img.setAttribute("alt", "effy");
+      document.getElementById("img-container").appendChild(img);
+    });
     
-    fetch(url)
-        .then(function(response){return response.json();})
-        .then(function(json){ buildPage(json);})
-    
-    function buildPage(data){
-        for(var i = 0; i < data.length; i = i + 1){
-            var image = document.createElement("me");
-            var image = document.createElement("elodie");
-            var image = document.createElement("fran");
-            var image = document.createElement("allegra");
-            var image = document.createElement("nina");
-            var image = document.createElement("ben");
-            var image = document.createElement("emily");
-            var image = document.createElement("matias");
-            var image = document.createElement("millie");
-            var image = document.createElement("jackson");
-                
-            image.attr(src="https://cdn.japantimes.2xx.jp/wp-content/uploads/2018/03/n-kyoto-a-20180316-870x580.jpg", data[me]);
-            
-            document.body.appendChild(me);
-            document.body.appendChild(elodie);
-            document.body.appendChild(fran);
-            document.body.appendChild(allegra);
-            document.body.appendChild(nina);
-            document.body.appendChild(ben);
-            document.body.appendChild(emily);
-            document.body.appendChild(matias);
-            document.body.appendChild(millie);
-            document.body.appendChild(jackson);
-            
-            me.innerHTML = data[i].me;
-            elodie.innerHTML = data[i].elodie;
-            fran.innerHTML = data[i].fran;
-            allegra.innerHTML = data[i].allegra;
-            fran.innerHTML = data[i].fran;
-            nina.innerHTML = data[i].nina;
-            ben.innerHTML = data[i].ben;
-            emily.innerHTML = data[i].emily;
-            matias.innerHTML = data[i].matias;
-            millie.innerHTML = data[i].millie;
-            jackson.innerHTML = data[i].jackson;
-            
-       
-            var line = document.createElement("hr");
-            document.body.appendChild(line);
-        }
-    }
     
 </script>
 </body>
 </html>
+
