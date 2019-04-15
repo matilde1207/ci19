@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <title></title>
 <body>
+ 
+            <div class=cutout></div>
+               
+<style>
     
-    <div
-    class="banner-section" id="img-container">
-    </div>
+            img {
+            height:200%;
+            width:200%;
+            }     
+            
+            .cutout:after{
+            content:'';
+            position:fixed;
+            width: 400px;
+            height: 250px;
+            border-radius: 30px;
+            left:430px;
+            top: 200px;    
+            box-shadow: 0px 0px 0px 2000px #FF5D5D
+;
+            }
+            
     
+</style>
 <script>
 
-    var data = {
-    "images": [{
-    "elodie": "https://cdn.japantimes.2xx.jp/wp-content/uploads/2018/03/n-kyoto-a-20180316-870x580.jpg"},
-    {"elodie" : "https://media.goeco.org/_media/media/320/10267_455_300.jpg"}]
-    };
+            var url = "https://raw.githubusercontent.com/matilde1207/ci19/master/studio/collection/mydata%20(1).json"
 
-    data.images.forEach( function(obj) {
-      var img = new Image();
-      img.src = obj.elodie;
-      img.setAttribute("class", "banner-img");
-      img.setAttribute("alt", "effy");
-      document.getElementById("img-container").appendChild(img);
-    });
-    
+            fetch(url)
+            .then(function(response){return response.json();})
+            .then(function(json){ buildPage(json);})
+
+            function buildPage(data){
+            for(var i = 0; i < data.length; i = i + 1){
+            
+        
+            var image0 = document.createElement("img");
+            var image1 = document.createElement("img");
+            var image2 = document.createElement("img");
+            var image3 = document.createElement("img");
+            var image4 = document.createElement("img");
+            var image5 = document.createElement("img");
+            var image6 = document.createElement("img");
+            var image7 = document.createElement("img");
+            var image8 = document.createElement("img");
+            var image9 = document.createElement("img");
+            
+            document.body.appendChild(image0);
+            document.body.appendChild(image1);
+            document.body.appendChild(image2);
+            document.body.appendChild(image3);
+            document.body.appendChild(image4);
+            document.body.appendChild(image5);
+            document.body.appendChild(image6);
+            document.body.appendChild(image7);
+            document.body.appendChild(image8);
+            document.body.appendChild(image9);
+            
+            image0.src = data[i].place1;
+            image1.src = data[i].place2;
+            image2.src = data[i].place3;
+            image3.src = data[i].place4;
+            image4.src = data[i].place5;
+            image5.src = data[i].place6;
+            image6.src = data[i].place7;
+            image7.src = data[i].place8;
+            image8.src = data[i].place9;
+            image9.src = data[i].place10;
+           
+        }
+    }
     
 </script>
 </body>
 </html>
-
