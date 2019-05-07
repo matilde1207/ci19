@@ -1,0 +1,59 @@
+.sticker {
+  width:800px;
+  height:800px;
+  position:absolute;
+  background: url(http://www.clker.com/cliparts/A/l/x/Y/2/O/heart-hi.png) top center no-repeat; 
+  animation: spin 10s linear infinite;
+  
+  animation-play-state: paused; 
+}
+
+.sticker:hover {
+
+  animation-play-state: running;
+}
+
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+    
+    
+    <!DOCTYPE html>
+<title></title>
+<body>
+<script>
+
+    //load our json file.
+    var url = "https://raw.githubusercontent.com/matilde1207/core-interaction/master/lab/classwork/water.json"
+    
+    fetch(url)
+        .then(function(response){return response.json();})
+        .then(function(json){ buildPage(json);})
+    
+    function buildPage(data){
+        for(var i = 0; i < data.length; i = i + 1){
+            var kind = document.createElement("h1");
+            var oz = document.createElement("h2");
+            var time = document.createElement("h3");
+            document.body.appendChild(kind);
+            document.body.appendChild(oz);
+            document.body.appendChild(time);
+            kind.innerHTML = data[i].kind;
+            oz.innerHTML = data[i].oz;
+            time.innerHTML = data[i].time;
+            
+            if(data[i].kind == "water"){
+                kind.style.color = "lightblue";
+            }
+             if(data[i].kind == "tea"){
+                kind.style.color = "beige";
+            }
+            
+            var line = document.createElement("hr");
+            document.body.appendChild(line);
+        }
+    }
+    
+</script>
+</body>
+</html>

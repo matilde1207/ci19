@@ -1,0 +1,45 @@
+    <div class="wrapper">
+    <div id="wheel"></div>
+
+
+<style>
+
+    #wheel {
+      color: #431236;
+      width: 25%;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform-origin: 0 0;
+      transform: rotate(0) translate3D(-50%, -50%, 0);
+      backface-visibility: hidden;
+      will-change: transform, color;
+    }
+</style>
+        
+<script>
+        
+    document.getElementById("wheel").animate([
+      { transform: 'translate3D(0, 0, 0)' }, 
+      { transform: 'translate3D(0, -300px, 0)' }
+    ], {
+      duration: 1000,
+      iterations: Infinity
+    })
+
+    var wheelTumbling = [
+      { transform: 'rotate(0) translate3D(-50%, -50%, 0', color: '#000' }, 
+      { color: '#431236', offset: 0.3},
+      { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)', color: '#000' }
+    ];
+
+    var wheelTiming = {
+      duration: 3000,
+      iterations: Infinity
+    }
+
+    document.getElementById("wheel").animate(
+      wheelTumbling, 
+      wheelTiming
+    )
+    
+</script>

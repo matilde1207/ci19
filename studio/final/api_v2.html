@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<title></title>
+<body>
+    <img id="wheel" src="photo/api_wheel.jpg">
+<script>
+    
+    fetch("https://cors.io/?https://gbfs.citibikenyc.com/gbfs/en/station_status.json")
+    .then(function(result){return result.json();})
+    .then(function(json){ buildPage(json);})
+    
+    function buildPage(json) {
+    var myStation = json.data.stations.filter(s => s.station_id == 3707).shift();
+    console.log(myStation);
+    console.log(myStation.num_bikes_available);
+    
+    if(myStation.num_bikes_available == 0)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 0s infinite linear";}
+
+    if(myStation.num_bikes_available == 1)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 117s infinite linear";}
+
+    if(myStation.num_bikes_available == 2)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 114s infinite linear";}
+
+    if(myStation.num_bikes_available == 3)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 111s infinite linear";}
+
+    if(myStation.num_bikes_available == 4)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 108s infinite linear";}
+
+    if(myStation.num_bikes_available == 5)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 105s infinite linear";}
+
+    if(myStation.num_bikes_available == 6)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 102s infinite linear";}
+
+    if(myStation.num_bikes_available == 7)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 99s infinite linear";}
+
+    if(myStation.num_bikes_available == 8)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 96s infinite linear";}
+
+    if(myStation.num_bikes_available == 9)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 93s infinite linear";}
+
+    if(myStation.num_bikes_available == 10)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 90s infinite linear";}
+
+    if(myStation.num_bikes_available == 11)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 87s infinite linear";}
+
+    if(myStation.num_bikes_available == 12)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 84s infinite linear";}
+
+    if(myStation.num_bikes_available == 13)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 81s infinite linear";}
+
+    if(myStation.num_bikes_available == 14)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 78s infinite linear";}
+
+    if(myStation.num_bikes_available == 15)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 75s infinite linear";}
+
+    if(myStation.num_bikes_available == 16)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 72s infinite linear";}
+
+    if(myStation.num_bikes_available == 17)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 69s infinite linear";}
+
+    if(myStation.num_bikes_available == 18)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 66s infinite linear";}
+
+    if(myStation.num_bikes_available == 19)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 63s infinite linear";}
+
+    if(myStation.num_bikes_available == 20)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 60s infinite linear";}
+
+    if(myStation.num_bikes_available == 21)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 57s infinite linear";}
+
+    if(myStation.num_bikes_available == 22)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 54s infinite linear";}
+
+    if(myStation.num_bikes_available == 23)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 51s infinite linear";}
+
+    if(myStation.num_bikes_available == 24)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 48s infinite linear";}
+
+    if(myStation.num_bikes_available == 25)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 45s infinite linear";}
+
+    if(myStation.num_bikes_available == 26)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 42s infinite linear";}
+
+    if(myStation.num_bikes_available == 27)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 39s infinite linear";}
+
+    if(myStation.num_bikes_available == 28)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 36s infinite linear";}
+
+    if(myStation.num_bikes_available == 29)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 33s infinite linear";}
+
+    if(myStation.num_bikes_available == 30)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 30s infinite linear";}
+
+    if(myStation.num_bikes_available == 31)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 27s infinite linear";}
+
+    if(myStation.num_bikes_available == 32)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 24s infinite linear";}
+
+    if(myStation.num_bikes_available == 33)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 21s infinite linear";}
+
+    if(myStation.num_bikes_available == 34)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 18s infinite linear";}
+
+    if(myStation.num_bikes_available == 35)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 15s infinite linear";}
+
+    if(myStation.num_bikes_available == 36)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 12s infinite linear";}
+
+    if(myStation.num_bikes_available == 37)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 9s infinite linear";}
+
+    if(myStation.num_bikes_available == 38)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 6s infinite linear";}
+
+    if(myStation.num_bikes_available == 39)
+    {document.getElementById("wheel").style.WebkitAnimation = "rotation 3s infinite linear";}}
+    
+    
+</script>
+<style>
+    body {
+		position: fixed;
+		color: #fff;
+		background: #0083D5;
+        top: -300px;
+        left: -195px;
+        }
+    #wheel {
+		-webkit-animation: rotation 50s infinite linear;
+        }
+    @-webkit-keyframes rotation {
+		from {
+            -webkit-transform: rotate(0deg);
+		      }
+		to {
+            -webkit-transform: rotate(359deg);
+		  }
+        } 
+</style>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<title></title>
+<body>
+    <div id = "wheel"></div>
+    <img id="wheel" src="photo/api_wheel2.jpg">
+<style>
+    #wheel{
+        position: fixed;
+		color: #fff;
+		background: #ffffff;
+        top: -300px;
+        left: -195px;
+        }
+    #spin {
+            -webkit-animation: rotation 50s infinite linear;
+            }
+
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+                  }
+            to {
+                -webkit-transform: rotate(359deg);
+              }
+            }
+        }
+</style>
+    
+<script>
+    
+    fetch("https://cors.io/?https://gbfs.citibikenyc.com/gbfs/en/station_status.json")
+    .then(function(result){return result.json();})
+    .then(function(json){ buildPage(json);})
+    
+    function buildPage(json) {
+    var myStation = json.data.stations.filter(s => s.station_id == 3707).shift();
+    console.log(myStation);
+    console.log(myStation.num_bikes_available);
+    
+        
+    var wheelSpin = [
+      { transform: 'rotate(0) translate3D(-50%, -50%, 0'}, 
+      { transform: 'rotate(360deg) translate3D(-50%, -50%, 0)'}
+    ];
+
+    var spinTiming = {
+      duration: 3000,
+      iterations: Infinity
+    }
+    document.getElementById("wheel").animate(
+      wheelSpin, 
+      spinTiming
+    )
+    }
+    
+    if(myStation.num_bikes_available == "23")
+    {kind.style.animation = "-webkit-animation: rotation 3s infinite linear; }";}
+    
+    
+    
+   
+    
+
+    
+</script>
+</body>
+</html>
